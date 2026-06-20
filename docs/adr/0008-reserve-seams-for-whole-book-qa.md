@@ -1,0 +1,3 @@
+# Reserve seams for whole-Book Q&A, build them later
+
+The future Explanation feature (NotebookLM-style answers about a selected passage using whole-Book context) is not in the MVP, but three seams are reserved so adding it is additive, not a rewrite: (1) a generic Selection Action toolbar in the Reader, so "explain this" is just another action alongside Lookup and save-to-Vocabulary; (2) a document-context store — the already-persisted structured Book content, later indexed for retrieval; and (3) a server-side `explain(book_id, selection, question)` endpoint shape. Whole-Book Q&A will use RAG (chunk + vector retrieval), not stuffing the entire Book into the context window every question, which would be too costly and exceed context limits.

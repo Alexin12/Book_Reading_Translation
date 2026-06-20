@@ -1,0 +1,17 @@
+# IDE
+.idea/
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Input books (not source code; may be copyrighted)
+*.pdf
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+dist/

@@ -1,0 +1,3 @@
+# Self-hosted with a single-password gate, architected for multi-user
+
+The app is deployed on the user's own cloud server and protected today by a single shared password checked in auth middleware — not a full account system. Because the server is exposed to the public internet and holds API keys and Books, some access control is mandatory. The architecture, however, is built to grow into a full login system later (the project may be open-sourced and monetized): all data hangs off a "user" concept (a single default user for now), auth is a swappable middleware layer, and API keys are stored per user. Replacing the password gate with JWT/session multi-user should touch only that layer.
